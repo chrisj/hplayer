@@ -3,7 +3,13 @@ const src = query.get('src').replace(/\/$/, '');
 
 console.log(src);
 
-const player = new Clappr.Player({source: src, parentId: "#player", width: "100%", height: "100%"});
+const player = new Clappr.Player({
+	source: src,
+	parentId: "#player",
+	width: "100%",
+	height: "100%",
+	plugins: [ChromecastPlugin],
+});
 
 const timeControls = {
     j: 5,
