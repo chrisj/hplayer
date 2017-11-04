@@ -3,7 +3,7 @@ body {
     background-color: black;
 }
 
-.bar-container {
+.media-control-center-panel > .bar-container {
     display: none !important;
 }
 
