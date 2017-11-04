@@ -14,7 +14,7 @@ const player = new Clappr.Player({
 const timeControls = {
     j: 5,
     k: 120,
-    l: 17 * 20
+    l: 17 * 60
 };
 
 document.addEventListener('keypress', (evt) => {
