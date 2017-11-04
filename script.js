@@ -31,4 +31,9 @@ var updateUrlTime = () => {
 
 player.on(Clappr.Events.PLAYER_PAUSE, updateUrlTime);
 
-setInterval(updateUrlTime, 1 * 1000);
+let alreadyStarted = false;
+player.on(Clappr.Events.PLAYER_PLAY, () => {
+	if (alreadyStarted) return;
+	alreadyStarted = true;
+	setInterval(updateUrlTime, 1 * 1000);
+});
