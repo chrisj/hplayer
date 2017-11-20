@@ -25,8 +25,9 @@ document.addEventListener('keypress', (evt) => {
     }
 });
 
-var updateUrlTime = () => {
-    window.location.hash = `t=${player.getCurrentTime()}`;
+const updateUrlTime = () => {
+    const baseUrl = window.location.href.split('#')[0];
+    window.location.replace(baseUrl + '#' + `t=${player.getCurrentTime()}`);
 }
 
 player.on(Clappr.Events.PLAYER_PAUSE, updateUrlTime);
